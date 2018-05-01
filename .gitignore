@@ -4,3 +4,5 @@ IntelipostMiddleware/bin/
 IntelipostMiddleware.Tests/obj/
 IntelipostMiddleware.Tests/bin/
 .vs/
+IntelipostMiddleware.API/obj/
+IntelipostMiddleware.API/bin/

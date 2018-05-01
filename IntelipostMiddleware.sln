@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelipostMiddleware", "IntelipostMiddleware\IntelipostMiddleware.csproj", "{DF07A508-503A-4431-9DA9-1CD47640E45E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelipostMiddleware.Service", "IntelipostMiddleware\IntelipostMiddleware.Service.csproj", "{DF07A508-503A-4431-9DA9-1CD47640E45E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3399AA8-F374-4AF3-81D9-2DD554CA3E0A}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelipostMiddleware.Tests", "IntelipostMiddleware.Tests\IntelipostMiddleware.Tests.csproj", "{0FB6640C-E443-48DB-A84F-6DF31C77A0F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelipostMiddleware.API", "IntelipostMiddleware.API\IntelipostMiddleware.API.csproj", "{A16EF618-E594-48E7-AEC1-28553C3220CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{0FB6640C-E443-48DB-A84F-6DF31C77A0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB6640C-E443-48DB-A84F-6DF31C77A0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB6640C-E443-48DB-A84F-6DF31C77A0F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16EF618-E594-48E7-AEC1-28553C3220CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16EF618-E594-48E7-AEC1-28553C3220CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16EF618-E594-48E7-AEC1-28553C3220CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16EF618-E594-48E7-AEC1-28553C3220CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
