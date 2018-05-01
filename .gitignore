@@ -1,3 +1,6 @@
 IntelipostMiddleware/wwwroot/
 IntelipostMiddleware/obj/
 IntelipostMiddleware/bin/
+IntelipostMiddleware.Tests/obj/
+IntelipostMiddleware.Tests/bin/
+.vs/
