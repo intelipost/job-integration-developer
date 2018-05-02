@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace IntelipostMiddleware
 {
@@ -12,11 +8,12 @@ namespace IntelipostMiddleware
         private static WebHostListener _singletonInstance;
         private IWebHost host;
 
-        private WebHostListener(string[] args){
+        private WebHostListener(string[] args)
+        {
             this.host = WebHost.CreateDefaultBuilder(args)
-            .UseStartup<Startup>()
-             .UseUrls("http://0.0.0.0:5000/")
-            .Build();
+                .UseStartup<Startup>()            
+                .UseUrls("http://0.0.0.0:5000/")
+                .Build();
         }
 
         public static WebHostListener GetInstance(string[] args)

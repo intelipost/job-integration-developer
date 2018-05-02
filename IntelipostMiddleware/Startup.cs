@@ -25,7 +25,7 @@ namespace IntelipostMiddleware
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseMvc();
         }
     }
