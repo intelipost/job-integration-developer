@@ -1,8 +1,5 @@
 ﻿using IntelipostMiddleware.Integrations.External.SalePlatform.Responses;
 using IntelipostMiddleware.Integrations.Intelipost.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IntelipostMiddleware.Integrations.External
 {

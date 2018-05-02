@@ -1,12 +1,12 @@
 ﻿using IntelipostMiddleware.Integrations.External.SalePlatform.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace IntelipostMiddleware.API.SalePlatformTestAPI
 {
+    /// <summary>
+    /// Serviço Mock apenas, sem auth
+    /// </summary>
     [Route("api/[controller]")]
     public class SalePlatformController : Controller
     {

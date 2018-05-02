@@ -2,14 +2,14 @@
 using IntelipostMiddleware.Integrations.Intelipost.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
 using static IntelipostMiddleware.Integrations.External.IntegrationProxyArgs;
 
 namespace IntelipostMiddleware.API
 {
+    /// <summary>
+    /// Serviço interno - precisa de autenticacao?!
+    /// </summary>
     [Route("api/[controller]")]
     public class TrackingController : Controller
     {
@@ -59,7 +59,7 @@ namespace IntelipostMiddleware.API
                 return this.BadRequest(result.Message);
             }
 
-            return this.Ok();
+            return this.Ok("Platform was notified successfully");
         }        
     }
 }

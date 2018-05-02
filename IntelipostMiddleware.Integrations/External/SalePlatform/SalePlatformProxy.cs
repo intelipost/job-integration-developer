@@ -18,6 +18,9 @@ namespace IntelipostMiddleware.Integrations.External.SalePlatform
             
             using (var client = new HttpClient())
             {
+                /*
+                 * Autenticacao pode ser feita aqui
+                 */ 
                 var url = "http://localhost:50502/api/saleplatform";
                 var response = client.PostAsync(url, new JsonContent(adaptee.Adapt(orderTrackingInformation))).Result;
 
