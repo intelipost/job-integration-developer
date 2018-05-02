@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Hosting;
+using IntelipostMiddleware.Integrations.Intelipost.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -14,10 +13,10 @@ namespace IntelipostMiddleware.API.Tests
         {
             TrackingController controller = new TrackingController();
 
-            var input = new IntelipostMiddleware.API.Models.Intelipost.OrderTrackingInformation()
+            var input = new OrderTrackingInformation()
             {
                 Order_id = null,
-                Event = new Models.Intelipost.OrderTrackingEvent()
+                Event = new OrderTrackingEvent()
                 {
                     Date = DateTime.Now,
                     Status_id = 1
@@ -34,10 +33,10 @@ namespace IntelipostMiddleware.API.Tests
         {
             TrackingController controller = new TrackingController();
 
-            var input = new IntelipostMiddleware.API.Models.Intelipost.OrderTrackingInformation()
+            var input = new OrderTrackingInformation()
             {
                 Order_id = 12,
-                Event = new Models.Intelipost.OrderTrackingEvent()
+                Event = new OrderTrackingEvent()
                 {
                     Date = DateTime.Now,
                     Status_id = 1
