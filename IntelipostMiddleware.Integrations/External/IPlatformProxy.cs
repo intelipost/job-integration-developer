@@ -6,7 +6,7 @@ using System.Text;
 
 namespace IntelipostMiddleware.Integrations.External
 {
-    public interface IIntegrationProxy
+    public interface IPlatformProxy
     {
         SendTrackNotificationResult SendTrackNotification(OrderTrackingInformation orderTrackingInformation);
 

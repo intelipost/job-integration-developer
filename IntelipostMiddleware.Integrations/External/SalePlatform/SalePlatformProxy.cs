@@ -1,26 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using IntelipostMiddleware.Integrations.External.SalePlatform.Adapters;
 using IntelipostMiddleware.Integrations.External.SalePlatform.Responses;
 using IntelipostMiddleware.Integrations.Intelipost.Models;
 using Newtonsoft.Json;
 
 namespace IntelipostMiddleware.Integrations.External.SalePlatform
 {
-    public sealed class SalePlatformProxy : IIntegrationProxy
+    public sealed class SalePlatformProxy : IPlatformProxy
     {
-        private async Task<object> teste(OrderTrackingInformation orderTrackingInformation)
-        {
-            return await HttpRequestHelper.Post("http://localhost:50502/api/tracking", orderTrackingInformation);
-        }
-
-
         public SendTrackNotificationResult SendTrackNotification(OrderTrackingInformation orderTrackingInformation)
         {
-            Task t = this.teste(orderTrackingInformation);
+            OrderTrackingInfoAdapter adaptee = new OrderTrackingInfoAdapter();
+            
+            using (var client = new HttpClient())
+            {
+                var url = "http://localhost:50502/api/saleplatform";
+                var response = client.PostAsync(url, new JsonContent(adaptee.Adapt(orderTrackingInformation))).Result;
 
-            return new SendTrackNotificationResult();
+                return new SendTrackNotificationResult(response);
+            }
+        }
+
+        public class JsonContent : StringContent
+        {
+            public JsonContent(object value) : base(JsonConvert.SerializeObject(value), Encoding.UTF8, "application/json")
+            {
+            }
         }
     }
 

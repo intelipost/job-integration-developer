@@ -28,7 +28,7 @@ namespace IntelipostMiddleware.Integrations.External
             this.Proxy = factory.CreateProxy(args);
         }
 
-        public IIntegrationProxy Proxy { get; private set; }
+        public IPlatformProxy Proxy { get; private set; }
     }
 
     public enum SuportedPlatforms

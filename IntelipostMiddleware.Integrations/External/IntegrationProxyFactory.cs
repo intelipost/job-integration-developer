@@ -7,7 +7,7 @@ namespace IntelipostMiddleware.Integrations.External
 {
     class IntegrationProxyFactory
     {
-        public IIntegrationProxy CreateProxy(IntegrationProxyArgs args)
+        public IPlatformProxy CreateProxy(IntegrationProxyArgs args)
         {
             if(args.Platform == SuportedPlatforms.SalePlatform)
             {
