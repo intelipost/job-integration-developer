@@ -22,7 +22,6 @@ namespace IntelipostMiddleware.API.Tests
             OkObjectResult result = actionResult as OkObjectResult;
 
             Assert.NotNull(result);
-
             List<string> messages = result.Value as List<string>;
 
             Assert.Equal(2, messages.Count);
