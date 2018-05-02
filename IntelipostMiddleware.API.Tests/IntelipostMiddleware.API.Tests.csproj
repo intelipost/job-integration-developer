@@ -18,6 +18,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IntelipostMiddleware.API\IntelipostMiddleware.API.csproj" />
+    <ProjectReference Include="..\IntelipostMiddleware\IntelipostMiddleware.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Hosting">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.hosting\2.0.2\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

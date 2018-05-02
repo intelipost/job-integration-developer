@@ -1,6 +1,5 @@
 ﻿using IntelipostMiddleware.API.Models.Intelipost;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,16 +8,10 @@ namespace IntelipostMiddleware.API
     [Route("api/[controller]")]
     public class TrackingController : Controller
     {
-        /*
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {   
-            return new string[] { "value1", "value2 of test" };
-        }*/
         [HttpGet]
         public string Get()
         {            
-            List<string> values = new List<string>() { "value1", "value2" };
+            List<string> values = new List<string>() { "Teste rapido", "Ando sem tempo" };
             return Ok(values).ToString();
         }
 
@@ -34,28 +27,13 @@ namespace IntelipostMiddleware.API
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]OrderTrackingInformation value)
         {
-            if (!value.Order_id.HasValue)
-            {
-                this.ModelState.AddModelError("order_id", "Invalid value.");
-            }
-
-            if (!value.Event.Status_id.HasValue)
-            {
-                this.ModelState.AddModelError("Status_id", "Invalid value.");
-            }
-
-
-            if (!value.Event.Date.HasValue)
-            {
-                this.ModelState.AddModelError("date", "Invalid value.");
-            }
-
-            if (!this.ModelState.IsValid)
+            TrackingValidationManager validator = new TrackingValidationManager(this, value);
+            if (!validator.Validate(this.ModelState))
             {
                 return this.BadRequest(this.ModelState);
             }
 
-            return this.Created("", value);
+            return this.Ok();
         }        
     }
 }
