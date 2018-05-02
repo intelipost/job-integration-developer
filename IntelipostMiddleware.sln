@@ -14,7 +14,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelipostMiddleware.Tests"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelipostMiddleware.API", "IntelipostMiddleware.API\IntelipostMiddleware.API.csproj", "{A16EF618-E594-48E7-AEC1-28553C3220CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelipostMiddleware.API.Tests", "IntelipostMiddleware.API.Tests\IntelipostMiddleware.API.Tests.csproj", "{66BA7B16-C227-415B-91B0-A3E096C81FDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelipostMiddleware.API.Tests", "IntelipostMiddleware.API.Tests\IntelipostMiddleware.API.Tests.csproj", "{66BA7B16-C227-415B-91B0-A3E096C81FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntelipostMiddleware.Integrations", "IntelipostMiddleware.Integrations\IntelipostMiddleware.Integrations.csproj", "{019B12ED-0320-49B3-B31B-2AC08277A9F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{66BA7B16-C227-415B-91B0-A3E096C81FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66BA7B16-C227-415B-91B0-A3E096C81FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66BA7B16-C227-415B-91B0-A3E096C81FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019B12ED-0320-49B3-B31B-2AC08277A9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019B12ED-0320-49B3-B31B-2AC08277A9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019B12ED-0320-49B3-B31B-2AC08277A9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019B12ED-0320-49B3-B31B-2AC08277A9F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

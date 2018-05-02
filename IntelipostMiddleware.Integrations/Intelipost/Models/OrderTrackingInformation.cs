@@ -1,7 +1,9 @@
 ﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
-namespace IntelipostMiddleware.API.Models.Intelipost
+namespace IntelipostMiddleware.Integrations.Intelipost.Models
 {
+    [DataContract(Name = "tracking")]
     public sealed class OrderTrackingInformation
     {
         [JsonProperty(PropertyName = "order_id")]

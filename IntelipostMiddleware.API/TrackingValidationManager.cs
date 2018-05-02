@@ -1,6 +1,6 @@
-﻿using IntelipostMiddleware.API.Models.Intelipost;
-using IntelipostMiddleware.API.TrackingValidations;
+﻿using IntelipostMiddleware.API.TrackingValidations;
 using IntelipostMiddleware.API.Validation;
+using IntelipostMiddleware.Integrations.Intelipost.Models;
 
 namespace IntelipostMiddleware.API
 {

@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace IntelipostMiddleware.API.Models.Intelipost
+namespace IntelipostMiddleware.Integrations.Intelipost.Models
 {
     public sealed class OrderPackageInvoice
     {

@@ -1,4 +1,4 @@
-﻿using IntelipostMiddleware.API.Models.Intelipost;
+﻿using IntelipostMiddleware.Integrations.Intelipost.Models;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace IntelipostMiddleware.API.TrackingValidations

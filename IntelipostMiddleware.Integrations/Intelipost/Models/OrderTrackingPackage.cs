@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace IntelipostMiddleware.API.Models.Intelipost
+namespace IntelipostMiddleware.Integrations.Intelipost.Models
 {
     public sealed class OrderTrackingPackage
     {
