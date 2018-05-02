@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,41 +10,43 @@ namespace IntelipostMiddleware.API.Tests
     public class TrackingTests
     {
         [Fact]
-        public async void Test1()
+        public async void MissingFieldShouldReturn400()
         {
             TrackingController controller = new TrackingController();
 
-            // Act
-            //IActionResult actionResult = await controller.Get();
+            var input = new IntelipostMiddleware.API.Models.Intelipost.OrderTrackingInformation()
+            {
+                Order_id = null,
+                Event = new Models.Intelipost.OrderTrackingEvent()
+                {
+                    Date = DateTime.Now,
+                    Status_id = 1
+                }
+            };
 
-            // Assert
-            Assert.NotNull(actionResult);
-
-            OkObjectResult result = actionResult as OkObjectResult;
-
-            Assert.NotNull(result);
-            List<string> messages = result.Value as List<string>;
-
-            Assert.Equal(2, messages.Count);
-            Assert.Equal("value1", messages[0]);
-            Assert.Equal("value2", messages[1]);
+            var result = await controller.Post(input);
+            BadRequestObjectResult viewResult = Assert.IsType<BadRequestObjectResult>(result);
+            Assert.Equal<int>(400, viewResult.StatusCode.Value);
         }
 
         [Fact]
-        public async Task TestPost()
+        public async Task RegularPostShoudReturn200()
         {
-            // Arrange
-            var controller = new TrackingController();
+            TrackingController controller = new TrackingController();
 
-            // Act
-            IActionResult actionResult = await controller.Post("{teste invalido}");
+            var input = new IntelipostMiddleware.API.Models.Intelipost.OrderTrackingInformation()
+            {
+                Order_id = 12,
+                Event = new Models.Intelipost.OrderTrackingEvent()
+                {
+                    Date = DateTime.Now,
+                    Status_id = 1
+                }
+            };
 
-            // Assert
-            Assert.NotNull(actionResult);
-            CreatedResult result = actionResult as CreatedResult;
-
-            Assert.NotNull(result);
-            Assert.Equal(201, result.StatusCode);
+            var resultapi = await controller.Post(input);
+            OkResult result = Assert.IsType<OkResult>(resultapi);
+            Assert.Equal<int>(200, result.StatusCode);
         }
     }
 }
