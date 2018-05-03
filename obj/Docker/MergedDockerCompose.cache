@@ -1,0 +1,11 @@
+services:
+  intelipostmiddleware.service:
+    build:
+      context: C:\Users\Leo\Desktop\job-integration-developer
+      dockerfile: IntelipostMiddleware/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: intelipostmiddlewareservice
+    ports:
+    - 80/tcp
+version: '3.0'

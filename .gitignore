@@ -1,0 +1,14 @@
+IntelipostMiddleware/wwwroot/
+IntelipostMiddleware/obj/
+IntelipostMiddleware/bin/
+IntelipostMiddleware.Tests/obj/
+IntelipostMiddleware.Tests/bin/
+.vs/
+IntelipostMiddleware.API/obj/
+IntelipostMiddleware.API/bin/
+IntelipostMiddleware.API.Tests/obj/
+IntelipostMiddleware.API.Tests/bin/
+IntelipostMiddleware.Integrations/obj/
+IntelipostMiddleware.Integrations/bin/
+IntelipostMiddleware.Integrations.Tests/obj/
+IntelipostMiddleware.Integrations.Tests/bin/
